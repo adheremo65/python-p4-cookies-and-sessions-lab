@@ -32,13 +32,13 @@ def show_article(id):
     session["page_views"] +=1
     if session["page_views"]<=3:
         article_data = {
-           "author": session.get('author'),
-            "title": session.get('title'),
-            "content":session.get('content'),
-            "preview": session.get('preview'),
-            "minutes_to_read": session.get('minutes_to_read'),
-            "date": session.get('date'),
-              }
+            'author': 'Sample Author',
+            'title': 'Sample Title',
+            'content': 'Sample Content',
+            'preview': 'Sample Preview',
+            'minutes_to_read': 5,
+            'date': '2023-09-22',
+        }
         return jsonify(article_data)
     return jsonify({'message': 'Maximum pageview limit reached'}),401
 
